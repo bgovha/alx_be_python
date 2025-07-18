@@ -20,4 +20,4 @@ match priority:
             reminder = f"Note: '{task}' is a low priority task. Consider completing it when you have free time."
     case _:
         reminder = "Invalid priority level entered. Please use high, medium, or low."
-print(reminder)
+print("\n" + reminder)
