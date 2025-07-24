@@ -13,12 +13,34 @@ def main():
 
         if choice == '1':
             # Prompt for and add an item
+            item = input("Enter the item to add: ").strip()
+            if item:
+                shopping_list.append(item)
+                print(f"'{item}' has been added to the shopping list.")
+            else:
+                print("Item name cannot be empty.")
             pass
         elif choice == '2':
             # Prompt for and remove an item
+            if not shopping_list:
+                print("The shopping list is empty.")
+                continue
+                
+            item = input("Enter the item to remove: ").strip()
+            if item in shopping_list:
+                shopping_list.remove(item)
+                print(f"'{item}' has been removed from the shopping list.")
+            else:
+                print(f"'{item}' was not found in the shopping list.")
             pass
         elif choice == '3':
             # Display the shopping list
+            if not shopping_list:
+                print("The shopping list is empty.")
+            else:
+                print("\nCurrent Shopping List:")
+                for i, item in enumerate(shopping_list, 1):
+                    print(f"{i}. {item}")
             pass
         elif choice == '4':
             print("Goodbye!")
