@@ -1,4 +1,4 @@
-def perform_operation(num1, num2, operation: str) -> float | str:
+def perform_operation(num1, num2, operation: str) :
     
     operation = operation.lower()
     
